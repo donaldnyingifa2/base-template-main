@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Moon, Sun } from 'lucide-react';
 
 const useTimer = () => {
   const [timer, setTimer] = useState(0);
@@ -418,9 +417,9 @@ export default function App() {
       <div className="max-w-md mx-auto p-4">
         <button
           onClick={() => setIsDarkMode(!isDarkMode)}
-          className="absolute top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+          className="absolute top-4 right-4 p-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
         >
-          {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+          {isDarkMode ? 'Light' : 'Dark' } Mode
         </button>
         <FeedingTracker baby={baby} onNewSession={(session) => console.log('New session:', session)} />
       </div>
